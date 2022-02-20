@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-icon
+      slot="start"
+      name="chevron-back-outline"
+      (click)="router.navigate(['feed'])"
+    ></ion-icon>
+    <ion-title>Account</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<div class="container-full dark" *ngIf="account">
+  <img src>
+  <ion-list>
+    <div class="dark">
+      <p id="key">ID:</p>
+      <p>{{account.id}}</p>
+    </div>
+    <div class="dark">
+      <p id="key">Nickname:</p>
+      <p>{{account.nickname}}</p>
+    </div>
+    <div class="dark">
+      <p id="key">Phone:</p>
+      <p>{{account.phone}}</p>
+    </div>
+  </ion-list>
+</div>
+

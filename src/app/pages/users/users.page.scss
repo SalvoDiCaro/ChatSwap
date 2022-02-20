@@ -1,0 +1,35 @@
+ion-toolbar {
+  ion-icon {
+    margin-left: 20px;
+  }
+}
+
+.users-container {
+  padding: 0;
+
+  .user {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2)
+    
+    p {
+      width: 50%;  
+
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    #phone {
+      text-align: right;
+    }
+  }
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin-right: 20px;
+}

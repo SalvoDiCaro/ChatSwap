@@ -1,0 +1,13 @@
+<ion-content [fullscreen]="true"> 
+  <div id="container">
+    <img width="100px" src="../../assets/img/logo.png">
+    <p>Hai già un account?</p>
+    <ion-button color="secondary" (click)="router.navigate(['sign-in'])">
+      {{ 'accedi' | uppercase }}
+    </ion-button>
+    <p>oppure</p>
+    <ion-button color="secondary" (click)="router.navigate(['sign-up'])">
+      {{ 'registrati' | uppercase }}
+    </ion-button>
+  </div>
+</ion-content>

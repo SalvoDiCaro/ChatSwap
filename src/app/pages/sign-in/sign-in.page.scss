@@ -1,0 +1,38 @@
+#container {
+    text-align: center;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  p {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.065em;
+  
+  }
+  
+  .title {
+    font-family: Lato-bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.065em;
+  
+    color: #F5F5F5;
+    }
+
+    ion-input{
+        border-bottom: 1px solid lightgrey;
+        margin-bottom: 10px;
+    }

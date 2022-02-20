@@ -1,0 +1,50 @@
+<div class="header">
+  <div id="header" class="bg-primary">
+    <div id="first-line">
+      <span id="app-name">ChatSwap</span>
+      <ion-icon
+        id="options"
+        name="settings"
+        (click)="openSettings()"
+      ></ion-icon>
+    </div>
+    <div id="recent-contacts-container">
+      <span id="recentsTitle">Contatti recenti</span>
+
+      <div id="recent-contacts" *ngIf="contacts">
+        <div
+          *ngFor="let contact of contacts, index as contactIndex"
+          class="recent"
+          (click)="openChat(contact)"
+        >
+          <img [src]="getAvatar()" class="recentImg" />
+          <span class="recents-name">{{ contact.nickname }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="container">
+  <ng-container *ngIf="loggedInfo && chats" >
+    <div class="element" *ngFor="let chat of chats;let chatIndex = index" (click)="openChat(loggedInfo.id === chat.user1.id ? chat.user2 : chat.user1 )">
+      <div>
+        <img class="avatar" [src]="getAvatar()" />
+      </div>
+      <div class="element__right">
+      <div *ngIf="loggedInfo.id === chat.user1.id;else content">
+          <p class="nickname"> {{ chat.user2.nickname }} </p>
+      </div>
+        <ng-template #content> 
+          <p class="nickname">  {{ chat.user1.nickname }}</p> </ng-template>
+        <p *ngIf="chat.lastMessage" class="lastMessage">{{ chat.lastMessage.text }}</p>
+        </div>
+    </div>
+  </ng-container>
+</div>
+<ion-icon
+  id="plus-button"
+  name="add-circle"
+  class="color-primary"
+  (click)="newChat()"
+></ion-icon>

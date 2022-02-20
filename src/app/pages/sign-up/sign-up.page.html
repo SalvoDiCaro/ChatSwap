@@ -1,0 +1,26 @@
+<ion-content [fullscreen]="true"> 
+  <div id="container">
+    <img width="100px" src="../../assets/img/logo.png">
+    <span class="blue-text">Crea subito<br>il tuo account!</span>
+    <form [formGroup]="form" (ngSubmit)="signUp()">
+      <ion-input
+        formControlName="nickname"
+        placeholder="Nickname"
+        required
+      ></ion-input>
+      <ion-input
+      formControlName="phone"
+      placeholder="Numero di telefono"
+      required
+    ></ion-input>
+      <ion-input
+        formControlName="password"
+        placeholder="Password"
+        required
+      ></ion-input>
+      <ion-button color="secondary" type="submit">
+        {{ 'registrati' | uppercase }}
+      </ion-button>
+    </form>
+  </div>
+</ion-content>

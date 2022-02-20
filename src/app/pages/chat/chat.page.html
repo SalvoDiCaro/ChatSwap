@@ -1,0 +1,58 @@
+<div class="header">
+  <div id="header" class="bg-primary">
+    <ion-icon
+      id="back-btn"
+      name="chevron-back-outline"
+      (click)="router.navigate(['chats'])"
+    ></ion-icon>
+    <div id="first-line">
+      <div id="userTitle" (click)="userAccount()">
+        <img src="assets/img/user.png" class="userImg" />
+        <span *ngIf="chat" class="title">{{ chat.user2.id  === loggedId ? chat.user1.nickname : chat.user2.nickname}}</span>
+      </div>
+      <div class="options">
+        <!-- <ion-toggle name="apple" color="dark" checked></ion-toggle> -->
+        <ion-icon id="options" name="settings"></ion-icon>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ion-content #target id="container">
+  <div *ngIf="chat" class="chat">
+    <div
+      *ngFor="let message of chat.messages; let i = index"
+      class="message-container"
+      [ngClass]="{'sender': message.creatorId === loggedId, 'receiver': message.creatorId !== loggedId}"
+
+    >
+      <div
+        class="bg-primary"
+        [ngClass]="['message', message.state]"
+        (dblclick)="toggleTranslation(message, i)"
+      >
+        <span id="{{message.id}}" class="text-message" >{{ message.translated ? message.textTranslated : message.text }}</span>
+        <div class="bottom-bar">
+          <span class="translation-message"  >{{message.translated ? 'Tradotto' : 'Originale'}}</span>
+          <div class="container__status">
+          <span  class="date">{{ message.dateTime | date: "HH:mm" }}</span>
+          <div class="state-container">
+            <span id="ball-1"></span>
+            <span id="ball-2"></span>
+            <span id="ball-3"></span>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <input [formControl]="messageInput" class="input" placeholder="Enter message"/>
+    <ion-buttons slot="end">
+      <ion-icon id="send-button" class="color-primary" name="send" (click)="sendMessage()"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,26 @@
+ion-toolbar {
+  ion-icon {
+    margin-left: 20px;
+  }
+}
+
+item-list {
+  div {
+    padding: 12px;
+    border-bottom: 1px solid gray;
+
+    p {
+      margin: 0;
+    }
+
+    #key {
+      width: 100%;
+      color: lighten(#000, 50%);
+    }
+  }
+}
+
+.logout-btn {
+  color: #fff;
+  background: lighten(red, 16%) !important;
+}

@@ -1,0 +1,45 @@
+<ion-content [fullscreen]="true">
+  <div id="header" class="bg-primary">
+    <ion-icon
+      id="back-btn"
+      name="chevron-back-outline"
+      (click)="router.navigate(['chats'])"
+    ></ion-icon>
+    <span class="title">Settings</span>
+  </div>
+
+  <div id="container">
+    <div class="element">
+      <div class="container__avatar">
+        <img class="avatar" [src]="getAvatar()" />
+      </div>
+      <div class="element__right">
+        <p class="nickname">{{ myNickname }}</p>
+      </div>
+    </div>
+    <ion-list class="language">
+      <ion-list-header>
+        <ion-label> Language </ion-label>
+      </ion-list-header>
+
+      <ion-item>
+        <ion-select
+          (ionChange)="setLanguage($event)"
+          [value]="currentLanguage"
+          okText="Okay"
+          cancelText="Dismiss"
+        >
+          <ion-select-option
+            *ngFor="let language of languages"
+            value="{{language.key}}"
+            >{{language.value}}</ion-select-option
+          >
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <p id="info">Info sull'app</p>
+    <p>Versione 1.0 - 2022</p>
+    <img width="60px" src="../../assets/img/logo.png" id="settingsLogo" />
+    <ion-button color="danger" class="logout-button" (click)="logoutActionSheet()">Logout</ion-button>
+  </div>
+</ion-content>

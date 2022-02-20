@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -24,3 +24,63 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.header {
+  background: #fff;
+}
+
+.button-solid {
+  --border-radius: 54px;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  padding: 0 20px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+
+  #back-btn {
+    margin-right: 10px;
+    font-size: 26px;
+  }
+
+  ion-icon {
+    font-size: 26px;
+  }
+}
+
+.blue-text {
+  font-family: Lato-bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.065em;
+  color: #00a7e1;
+  margin: 20px 0;
+}
+
+.bg-primary {
+  background-color: #00a7e1;
+}
+
+.color-primary {
+  color: #00a7e1;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("./assets/fonts/Lato-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Lato-bold";
+  src: url("./assets/fonts/Lato-Bold.ttf");
+}

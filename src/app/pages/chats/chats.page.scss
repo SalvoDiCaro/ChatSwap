@@ -1,0 +1,181 @@
+#header {
+  flex-wrap: wrap;
+}
+
+#app-name {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+
+  letter-spacing: 0.065em;
+
+  color: #f5f5f5;
+}
+
+#first-line {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nickname {
+  margin: 0px;
+}
+
+.element {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+  position: relative;
+
+
+
+}
+.element__right {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.lastMessage {
+  font-size: 12px;
+  color: grey;
+  margin: 0;
+  padding: 0;
+  width: 60vw;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+#container {
+  padding: 0px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  overflow-y: auto;
+
+  item-list {
+    width: 100%;
+  }
+}
+
+p {
+  font-family: Lato;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.065em;
+  margin: 5px;
+}
+
+.title {
+  font-family: Lato-bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.065em;
+
+  color: #f5f5f5;
+}
+
+ion-input {
+  border-bottom: 1px solid #f5f5f5;
+  margin-bottom: 10px;
+}
+
+#plus-button {
+  z-index: 5;
+  font-size: 50px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  filter: drop-shadow(3px 1px 11px rgba(0, 0, 0, 0.25));
+}
+
+#options {
+  font-size: 25px;
+  color: white;
+}
+
+.chat {
+  padding-bottom: 5px;
+  width: 100%;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+#recent-contacts-container {
+  width: 100%;
+
+  #recentsTitle {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.065em;
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    color: #f5f5f5;
+  }
+
+  #recent-contacts {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+
+    .recent {
+      display: flex;
+      flex-direction: column;
+      width: 35px;
+      margin-right: 10px;
+
+      .recentImg {
+        background-color: #f5f5f5;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+      }
+
+      .recents-name {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 10px;
+
+        color: #f5f5f5;
+
+        margin-top: 4px;
+
+        text-align: center;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}

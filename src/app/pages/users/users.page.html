@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-icon
+      slot="start"
+      name="chevron-back-outline"
+      (click)="router.navigate(['chats'])"
+    ></ion-icon>
+    <ion-title>Nuova chat</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+  <ion-list class="users-container m-0" *ngIf="users">
+    <ion-item
+      class="user"
+      *ngFor="let user of users"
+      color="light"
+    >
+      <img class="avatar" [src]="getAvatar()" />
+      <p id="nickname" (click)="openChat(user)">{{user.nickname}}</p>
+    </ion-item>
+  </ion-list>
+</div>
+</ion-content>
+

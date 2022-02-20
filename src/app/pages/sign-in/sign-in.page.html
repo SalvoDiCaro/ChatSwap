@@ -1,0 +1,21 @@
+<ion-content [fullscreen]="true"> 
+  <div id="container">
+    <img width="100px" src="../../assets/img/logo.png">
+    <span class="blue-text">Piacere di <br>rivederti!</span>
+    <form [formGroup]="form" (ngSubmit)="signIn()">
+      <ion-input
+        formControlName="nickname"
+        placeholder="Nickname"
+        required
+      ></ion-input>
+      <ion-input
+        formControlName="password"
+        placeholder="Password"
+        required
+      ></ion-input>
+      <ion-button color="secondary" type="submit">
+        {{ 'accedi' | uppercase }}
+      </ion-button>
+    </form>
+  </div>
+</ion-content>
